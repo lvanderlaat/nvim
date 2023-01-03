@@ -6,4 +6,3 @@ require 'user.plugins'
 require 'user.run'
 require 'user.toggleterm'
 require 'user.lsp'
-require('nvim_comment').setup()

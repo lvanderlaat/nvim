@@ -41,8 +41,8 @@ return packer.startup(
         use 'wbthomason/packer.nvim'
         use 'jiangmiao/auto-pairs' 
         use 'morhetz/gruvbox'
-        use "akinsho/toggleterm.nvim"
-        use "terrortylor/nvim-comment"
+        use 'akinsho/toggleterm.nvim'
+        use {'terrortylor/nvim-comment', config=function() require('nvim_comment').setup() end}
 
         -- LSP
         use 'williamboman/nvim-lsp-installer'
