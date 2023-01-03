@@ -41,14 +41,6 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 local Terminal = require("toggleterm.terminal").Terminal
 
-if not vim.g.cmd then
-    vim.g.cmd = 'echo "Create a session command"; clear'
-end
-
-local session_terminal = Terminal:new({cmd=vim.g.cmd, hidden=true})
-function _SESSION_CMD_TOGGLE()
-    session_terminal:toggle()
-end
 
 local python = Terminal:new({cmd="ipython", hidden=true})
 function _PYTHON_TOGGLE()

@@ -1,3 +1,13 @@
+if not vim.g.cmd then
+    vim.g.cmd = 'echo "Set a session command: :lua session_cmd(CMD)"'
+end
+
+function session_cmd(cmd)
+    vim.g.cmd = cmd
+    vim.cmd('source ~/.config/nvim/lua/user/keymaps.lua')
+end
+
+
 local opts = {noremap=true, silent=false}
 
 -- Shorten function name
@@ -63,11 +73,5 @@ keymap('n', 'Y', 'yy', opts)
 keymap('n', '<leader>gs', '<Cmd>lua _GIT_SYNC_TOGGLE()<CR>', opts)
 
 -- Run the session command
--- keymap(
---     'n',
---     '<leader>r',
---     ':w<CR><Cmd>TermExec cmd=\'' .. vim.g.cmd .. '\'<CR>',
---     {noremap=true, silent=false}
--- )
-keymap('n', '<leader>r', ':w<CR><Cmd>lua _SESSION_CMD_TOGGLE()<CR>', opts)
+keymap('n', '<leader>r', ':w<CR><Cmd>TermExec cmd=\'' .. vim.g.cmd .. '\'<CR>', opts)
 keymap('v', '<leader>r', '<ESC><Cmd>ToggleTermSendVisualSelection<CR>', opts)
