@@ -1,4 +1,5 @@
 local options = {
+    syntax='on',
     encoding='utf-8',
 
     -- Line numbering --

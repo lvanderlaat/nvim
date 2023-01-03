@@ -75,3 +75,6 @@ keymap('n', '<leader>gs', '<Cmd>lua _GIT_SYNC_TOGGLE()<CR>', opts)
 -- Run the session command
 keymap('n', '<leader>r', ':w<CR><Cmd>TermExec cmd=\'' .. vim.g.cmd .. '\'<CR>', opts)
 keymap('v', '<leader>r', '<ESC><Cmd>ToggleTermSendVisualSelection<CR>', opts)
+
+-- Path completion
+keymap('i', '<C-p>', '<C-x><C-f>', opts)
