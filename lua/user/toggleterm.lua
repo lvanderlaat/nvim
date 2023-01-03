@@ -52,9 +52,11 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 local Terminal = require("toggleterm.terminal").Terminal
 
 local python = Terminal:new({cmd="ipython", hidden=true})
-
 function _PYTHON_TOGGLE()
 	python:toggle()
 end
 
-local git_sync = Terminal:new({cmd='~/.config/nvim/git-sync'})
+local git_sync = Terminal:new({cmd='cd ~/.config/nvim; ~/.config/nvim/git-sync', hidden=true })
+function _GIT_SYNC_TOGGLE()
+    git_sync:toggle()
+end

@@ -60,4 +60,4 @@ keymap('v', '//', 'y/\\V<C-R>=escape(@",\'/\')<CR><CR>', opts)
 keymap('n', 'Y', 'yy', opts)
 
 -- git-sync
-keymap('n', ',gs', 'lua git_sync', opts)
+keymap('n', ',gs', '<Cmd>lua _GIT_SYNC_TOGGLE<CR>', opts)
