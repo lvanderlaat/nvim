@@ -11,8 +11,8 @@ local keymap = vim.keymap.set
 keymap('n', '<space>', 'za', opts)
 
 -- Print something and exit
-keymap('n', '<leader>e', 'iprint(); exit()<CR><ESC>kf)i', opts)  
-keymap('i', '<leader>e',  'print(); exit()<CR><ESC>kf)i', opts)
+keymap('n', '<leader>e', 'iprint()<CR>exit()<CR><ESC>kf)i', opts)  
+keymap('i', '<leader>e',  'print()<CR>exit()<CR><ESC>kf)i', opts)
 
 -- Modules header
 keymap(
