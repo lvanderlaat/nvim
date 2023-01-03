@@ -59,17 +59,5 @@ keymap('v', '//', 'y/\\V<C-R>=escape(@",\'/\')<CR><CR>', opts)
 -- Yank, as originally in Vim
 keymap('n', 'Y', 'yy', opts)
 
--- -- Run the session command
--- keymap(
---     'n',
---     '<leader>r',
---     ':w<CR>:call term_sendkeys(&shell, g:term_command_sequence)<CR>:call term_sendkeys(&shell, "\n")<CR>',
---     opts
--- )
-
--- keymap(
---     'i',
---     '<leader>r',
---     '<ESC>:w<CR>:call term_sendkeys(&shell, g:term_command_sequence)<CR>:call term_sendkeys(&shell, "\n")<CR>',
---     opts
--- )
+-- git-sync
+keymap('n', ',gs', 'lua git_sync', opts)

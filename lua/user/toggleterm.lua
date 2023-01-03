@@ -56,3 +56,5 @@ local python = Terminal:new({cmd="ipython", hidden=true})
 function _PYTHON_TOGGLE()
 	python:toggle()
 end
+
+local git_sync = Terminal:new({cmd='~/.config/nvim/git-sync'})
