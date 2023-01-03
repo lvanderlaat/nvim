@@ -1,18 +1,8 @@
-cmd = 'ipython'
-
 local status_ok, toggleterm = pcall(require, "toggleterm")
 if not status_ok then
 	return
 end
 
-local keymap = vim.api.nvim_set_keymap
-
-keymap(
-    'n',
-    '<leader>r',
-    ':w<CR>:TermExec cmd=\'' .. cmd .. '\'<CR>',
-    {noremap=true, silent=false}
-)
 
 toggleterm.setup({
 	size = 90,
@@ -51,12 +41,21 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 local Terminal = require("toggleterm.terminal").Terminal
 
+if not vim.g.cmd then
+    vim.g.cmd = 'echo "Create a session command"; clear'
+end
+
+local session_terminal = Terminal:new({cmd=vim.g.cmd, hidden=true})
+function _SESSION_CMD_TOGGLE()
+    session_terminal:toggle()
+end
+
 local python = Terminal:new({cmd="ipython", hidden=true})
 function _PYTHON_TOGGLE()
 	python:toggle()
 end
 
-local git_sync = Terminal:new({cmd='cd ~/.config/nvim; ~/.config/nvim/git-sync', hidden=true })
+local git_sync = Terminal:new({cmd='cd ~/.config/nvim; ~/.config/nvim/git-sync', hidden=true})
 function _GIT_SYNC_TOGGLE()
     git_sync:toggle()
 end
