@@ -1,7 +1,5 @@
 local colorscheme = 'gruvbox'
 vim.opt.background = 'dark'
-
--- Gruvbox
 vim.g.gruvbox_contrast_dark = 'hard'
 vim.g.gruvbox_contrast_light = 'hard'
 
