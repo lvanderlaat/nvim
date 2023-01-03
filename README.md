@@ -6,5 +6,4 @@
 
 # Don't forget to keep the configuration in sync!
 
-    cd ~/.config/nvim
-    ./git-sync
+    <leader>gs
