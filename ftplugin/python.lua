@@ -35,4 +35,5 @@ vim.opt.textwidth = 79
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.fileformat = 'unix'
+vim.opt.commentstring="# %s"
 -- vim.opt.indentLine_char = '┆'

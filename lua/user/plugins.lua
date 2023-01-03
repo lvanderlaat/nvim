@@ -39,10 +39,10 @@ packer.init {
 return packer.startup(
     function(use)
         use 'wbthomason/packer.nvim'
-        use 'tpope/vim-commentary'
         use 'jiangmiao/auto-pairs' 
         use 'morhetz/gruvbox'
         use "akinsho/toggleterm.nvim"
+        use "terrortylor/nvim-comment"
 
         -- LSP
         use 'williamboman/nvim-lsp-installer'
@@ -54,13 +54,6 @@ return packer.startup(
         use 'hrsh7th/cmp-buffer'
         use 'hrsh7th/cmp-path'
         use 'hrsh7th/cmp-cmdline'
-
-        -- use {
-        --     'numToStr/Comment.nvim',
-        --     config = function()
-        --         require('Comment').setup()
-        --     end
-        -- }
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
