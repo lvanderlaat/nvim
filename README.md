@@ -3,6 +3,7 @@
     git clone git@github.com:lvanderlaat/nvim.git ~/.config/nvim
     cd ~/.config/nvim
     chmod u+x git-sync
+    git config --bool branch.main.sync true
 
 # Don't forget to keep the configuration in sync!
 
