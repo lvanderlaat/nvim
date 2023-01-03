@@ -1,12 +1,9 @@
 local colorscheme = 'gruvbox'
-
--- nightfox, duskfox, terafox, nordfox, carbonfox
--- tokyonight-night, tokyonight-storm, tokyonight-moon
+vim.opt.background = 'dark'
 
 -- Gruvbox
 vim.g.gruvbox_contrast_dark = 'hard'
 vim.g.gruvbox_contrast_light = 'hard'
-vim.opt.background = 'dark'
 
 
 vim.cmd[[
