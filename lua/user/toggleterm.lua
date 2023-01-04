@@ -61,7 +61,7 @@ local terminal_squeue = Terminal:new{
     cmd='watch -n 2 squeue -u laat',
     hidden=true,
     direction='float',
-    close_on_exit=true
+    close_on_exit=false
 }
 function _SQUEUE_TOGGLE()
     terminal_squeue:toggle()
