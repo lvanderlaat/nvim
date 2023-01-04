@@ -79,3 +79,6 @@ keymap('v', '<leader>r', '<ESC><Cmd>ToggleTermSendVisualSelection<CR>', opts)
 
 -- Path completion
 keymap('i', '<C-p>', '<C-x><C-f>', opts)
+
+-- Tree
+keymap('n', '<leader>t', '<Cmd>NvimTreeToggle<CR>', opts)
