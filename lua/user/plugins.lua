@@ -58,6 +58,8 @@ return packer.startup(
         use 'hrsh7th/cmp-path'
         use 'hrsh7th/cmp-cmdline'
 
+        use {'nvim-tree/nvim-tree.lua', requires={'nvim-tree/nvim-web-devicons'}}
+
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
         if PACKER_BOOTSTRAP then
