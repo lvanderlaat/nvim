@@ -69,8 +69,10 @@ keymap('v', '//', 'y/\\V<C-R>=escape(@",\'/\')<CR><CR>', opts)
 -- Yank, as originally in Vim
 keymap('n', 'Y', 'yy', opts)
 
--- git-sync
+-- Terminal toggles
 keymap('n', '<leader>gs', '<Cmd>lua _GIT_SYNC_TOGGLE()<CR>', opts)
+keymap('n', '<leader>q', '<Cmd>lua _SQUEUE_TOGGLE()<CR>', opts)
+keymap('n', '<leader>l', '<Cmd>lua _LOG_TOGGLE()<CR>', opts)
 
 -- Run the session command
 keymap('n', '<leader>r', '<Cmd>w<CR><Cmd>TermExec cmd=\'' .. vim.g.cmd .. '\'<CR>', opts)
@@ -81,4 +83,4 @@ keymap('v', '<leader>r', '<ESC><Cmd>ToggleTermSendVisualSelection<CR>', opts)
 keymap('i', '<C-p>', '<C-x><C-f>', opts)
 
 -- Tree
-keymap('n', '<leader>t', '<Cmd>NvimTreeToggle<CR>', opts)
+keymap('n', '<leader>tt', '<Cmd>NvimTreeToggle<CR>', opts)
