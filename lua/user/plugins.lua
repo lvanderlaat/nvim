@@ -43,8 +43,9 @@ return packer.startup(
         use 'morhetz/gruvbox'
         use 'akinsho/toggleterm.nvim'
         use 'tpope/vim-commentary'
-        -- use {'terrortylor/nvim-comment', config=function() require('nvim_comment').setup() end}
         use 'chrisbra/csv.vim'
+        use 'vim-scripts/indentpython.vim'
+        use 'Lokaltog/powerline'
 
         -- LSP
         use 'williamboman/nvim-lsp-installer'
