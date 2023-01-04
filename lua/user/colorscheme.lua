@@ -5,11 +5,11 @@ vim.g.gruvbox_contrast_light = 'hard'
 
 
 vim.cmd[[
-augroup AutoSource
-    autocmd!
-    autocmd AutoSource BufWritePost <afile> nested source %
-augroup END
-autocmd! bufwritepost colorscheme.lua source %
+    augroup AutoSource
+        autocmd!
+        autocmd AutoSource BufWritePost <afile> nested source %
+    augroup END
+    autocmd! bufwritepost colorscheme.lua source %
 ]]
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)

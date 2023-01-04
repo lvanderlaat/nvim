@@ -46,6 +46,7 @@ return packer.startup(
         use 'chrisbra/csv.vim'
         use 'vim-scripts/indentpython.vim'
         use 'Lokaltog/powerline'
+        use {'nvim-tree/nvim-tree.lua', requires={'nvim-tree/nvim-web-devicons'}}
 
         -- LSP
         use 'williamboman/nvim-lsp-installer'
@@ -58,7 +59,9 @@ return packer.startup(
         use 'hrsh7th/cmp-path'
         use 'hrsh7th/cmp-cmdline'
 
-        use {'nvim-tree/nvim-tree.lua', requires={'nvim-tree/nvim-web-devicons'}}
+        -- Treesitter
+        use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+        use "p00f/nvim-ts-rainbow"
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
