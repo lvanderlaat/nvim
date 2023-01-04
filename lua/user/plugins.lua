@@ -41,6 +41,7 @@ return packer.startup(
         use 'wbthomason/packer.nvim'
         use 'jiangmiao/auto-pairs' 
         use 'morhetz/gruvbox'
+        use 'folke/tokyonight.nvim'
         use 'akinsho/toggleterm.nvim'
         use 'tpope/vim-commentary'
         use 'chrisbra/csv.vim'
@@ -49,19 +50,12 @@ return packer.startup(
         use {'nvim-tree/nvim-tree.lua', requires={'nvim-tree/nvim-web-devicons'}}
 
         -- LSP
-        use 'williamboman/nvim-lsp-installer'
-        use 'neovim/nvim-lspconfig'
-
-        -- Completion
-        use 'hrsh7th/nvim-cmp'
-        use 'hrsh7th/cmp-nvim-lsp'
-        use 'hrsh7th/cmp-buffer'
-        use 'hrsh7th/cmp-path'
-        use 'hrsh7th/cmp-cmdline'
+        -- use 'williamboman/nvim-lsp-installer'
+        -- use 'neovim/nvim-lspconfig'
 
         -- Treesitter
-        use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
-        use "p00f/nvim-ts-rainbow"
+        -- use {"nvim-treesitter/nvim-treesitter", run=":TSUpdate"}
+        -- use "p00f/nvim-ts-rainbow"
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
