@@ -9,4 +9,14 @@ require 'lspconfig'.pylsp.setup{
         vim.keymap.set('n', '<leader>gj', vim.diagnostic.goto_next, {buffer=0})
         vim.keymap.set('n', '<leader>gk', vim.diagnostic.goto_prev, {buffer=0})
 	end,
+    settings={
+        pylsp={
+            plugins={
+                flake8={enabled=false},
+                pycodestyle={enabled=false},
+                pyflakes={enabled=false},
+            },
+        },
+    },
 }
+
