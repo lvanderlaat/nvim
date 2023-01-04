@@ -47,7 +47,12 @@ function _PYTHON_TOGGLE()
 	python:toggle()
 end
 
-local git_sync = Terminal:new({cmd='cd ~/.config/nvim; ~/.config/nvim/git-sync', hidden=true})
+local git_sync = Terminal:new{
+    cmd='cd ~/.config/nvim; ~/.config/nvim/git-sync',
+    hidden=true,
+    direction='float',
+    close_on_exit=false
+}
 function _GIT_SYNC_TOGGLE()
     git_sync:toggle()
 end
