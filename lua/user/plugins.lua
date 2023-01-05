@@ -51,14 +51,13 @@ return packer.startup(
         -- LSP
         use 'neovim/nvim-lspconfig'
 
-        -- Treesitter
-        use {"nvim-treesitter/nvim-treesitter", run=":TSUpdate"}
-        use "p00f/nvim-ts-rainbow"
-
         -- Telescope
         -- use 'nvim-lua/plenary.nvim'
         -- use 'nvim-telescope/telescope.nvim'
-
+        
+        -- Treesitter
+        -- use {"nvim-treesitter/nvim-treesitter", run=":TSUpdate"}
+        -- use "p00f/nvim-ts-rainbow"
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
