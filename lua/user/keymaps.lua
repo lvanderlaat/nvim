@@ -83,4 +83,8 @@ keymap('v', '<leader>r', '<ESC><Cmd>ToggleTermSendVisualSelection<CR>', opts)
 keymap('i', '<C-p>', '<C-x><C-f>', opts)
 
 -- Tree
-keymap('n', '<leader>tt', '<Cmd>NvimTreeToggle<CR>', opts)
+keymap('n', '<leader>a', '<Cmd>NvimTreeToggle<CR>', opts)
+
+-- LSP Diagnostics
+keymap('n', '<leader>dd', '<Cmd>lua vim.diagnostic.disable()<CR>', opts)
+keymap('n', '<leader>de', '<Cmd>lua vim.diagnostic.enable()<CR>', opts)
