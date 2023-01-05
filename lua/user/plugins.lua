@@ -41,21 +41,25 @@ return packer.startup(
         use 'wbthomason/packer.nvim'
         use 'jiangmiao/auto-pairs' 
         use 'morhetz/gruvbox'
-        use 'folke/tokyonight.nvim'
         use 'akinsho/toggleterm.nvim'
         use 'tpope/vim-commentary'
         use 'chrisbra/csv.vim'
         use 'vim-scripts/indentpython.vim'
-        use 'Lokaltog/powerline'
-        use {'nvim-tree/nvim-tree.lua', requires={'nvim-tree/nvim-web-devicons'}}
+        use 'nvim-tree/nvim-web-devicons'
+        use 'nvim-tree/nvim-tree.lua'
 
         -- LSP
         -- use 'williamboman/nvim-lsp-installer'
-        -- use 'neovim/nvim-lspconfig'
+        use 'neovim/nvim-lspconfig'
 
         -- Treesitter
-        -- use {"nvim-treesitter/nvim-treesitter", run=":TSUpdate"}
-        -- use "p00f/nvim-ts-rainbow"
+        use {"nvim-treesitter/nvim-treesitter", run=":TSUpdate"}
+        use "p00f/nvim-ts-rainbow"
+
+        -- Telescope
+        -- use 'nvim-lua/plenary.nvim'
+        -- use 'nvim-telescope/telescope.nvim'
+
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
