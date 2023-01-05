@@ -49,7 +49,6 @@ return packer.startup(
         use 'nvim-tree/nvim-tree.lua'
 
         -- LSP
-        -- use 'williamboman/nvim-lsp-installer'
         use 'neovim/nvim-lspconfig'
 
         -- Treesitter
