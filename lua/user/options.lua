@@ -28,7 +28,7 @@ local options = {
 
     -- Wrap
     wrap=false,
-    termguicolors=false
+    termguicolors=true
 }
 
 for key, value in pairs(options) do
