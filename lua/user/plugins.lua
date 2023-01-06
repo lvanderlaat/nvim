@@ -40,7 +40,7 @@ return packer.startup(
     function(use)
         use 'wbthomason/packer.nvim'
         use 'jiangmiao/auto-pairs' 
-        use 'morhetz/gruvbox'
+        use 'EdenEast/nightfox.nvim'
         use 'akinsho/toggleterm.nvim'
         use 'tpope/vim-commentary'
         use 'chrisbra/csv.vim'

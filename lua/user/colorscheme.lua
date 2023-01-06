@@ -1,8 +1,4 @@
-local colorscheme = 'gruvbox'
-vim.opt.background = 'dark'
-vim.g.gruvbox_contrast_dark = 'hard'
-vim.g.gruvbox_contrast_light = 'hard'
-
+local colorscheme = 'carbonfox'
 
 vim.cmd[[
 augroup AutoSource
