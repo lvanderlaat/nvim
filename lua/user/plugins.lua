@@ -74,7 +74,6 @@ return packer.startup(
         use 'hrsh7th/cmp-vsnip'
         use 'hrsh7th/vim-vsnip'
 
-
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
         if PACKER_BOOTSTRAP then
