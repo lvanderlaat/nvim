@@ -1,12 +1,12 @@
 local colorscheme = 'nightfox'
 
 -- nightfox
+-- carbonfox
+-- duskfox
+-- terafox
+-- nordfox
 -- dayfox
 -- dawnfox
--- duskfox
--- nordfox
--- terafox
--- carbonfox
 
 vim.cmd[[
 augroup AutoSource
@@ -24,7 +24,7 @@ require('nightfox').setup({
     -- Compiled file's destination location
     compile_path = vim.fn.stdpath("cache") .. "/nightfox",
     compile_file_suffix = "_compiled", -- Compiled file suffix
-    transparent = true,    -- Disable setting background
+    transparent = false,    -- Disable setting background
     terminal_colors = true, -- Set terminal colors (vim.g.terminal_color_*) used in `:terminal`
     dim_inactive = true,   -- Non focused panes set to alternative background
     module_default = true,  -- Default enable value for modules
@@ -41,7 +41,7 @@ require('nightfox').setup({
       variables = "NONE",
     },
     inverse = {             -- Inverse highlight for different types
-      match_paren = false,
+      match_paren = true,
       visual = false,
       search = false,
     },
@@ -49,7 +49,19 @@ require('nightfox').setup({
       -- ...
     },
   },
-  palettes = {},
+    palettes = {
+        -- nightfox={
+        --     -- blue = { base = "#4d688e", bright = "#4e75aa", dim = "#485e7d" },
+        --     -- bg0='#141A23',
+        --     -- bg1 = "#2e3440",
+        -- },
+        nightfox = {
+          bg1 = "#000000", -- Black background
+          bg0 = "#1d1d2b", -- Alt backgrounds (floats, statusline, ...)
+          bg3 = "#121820", -- 55% darkened from stock
+          sel0 = "#131b24", -- 55% darkened from stock
+        },
+    },
   specs = {},
   groups = {},
 })
