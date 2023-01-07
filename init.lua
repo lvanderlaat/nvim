@@ -10,3 +10,5 @@ require 'user.treesitter'
 require 'user.colorscheme'
 require 'user.telescope'
 require 'user.lualine'
+
+require("image_preview").setup({})
