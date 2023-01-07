@@ -56,7 +56,7 @@ require('nightfox').setup({
         --     -- bg1 = "#2e3440",
         -- },
         nightfox = {
-          bg1 = "#000000", -- Black background
+          bg1 = '#0A0A0A', -- Black background
           bg0 = "#1d1d2b", -- Alt backgrounds (floats, statusline, ...)
           bg3 = "#121820", -- 55% darkened from stock
           sel0 = "#131b24", -- 55% darkened from stock
