@@ -39,7 +39,8 @@ packer.init {
 return packer.startup(
     function(use)
         use 'wbthomason/packer.nvim'
-        use 'jiangmiao/auto-pairs' 
+        -- use 'jiangmiao/auto-pairs' 
+        use {"windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end}
         use 'folke/tokyonight.nvim'
         use 'akinsho/toggleterm.nvim'
         use 'tpope/vim-commentary'
@@ -59,6 +60,9 @@ return packer.startup(
         -- Treesitter
         use {"nvim-treesitter/nvim-treesitter", run=":TSUpdate"}
         use "p00f/nvim-ts-rainbow"
+
+        -- Syntax Highlight
+        use 'numirias/semshi'
 
         -- Completion
         use 'hrsh7th/cmp-nvim-lsp'
