@@ -1,12 +1,4 @@
-local colorscheme = 'nightfox'
-
--- nightfox
--- carbonfox
--- duskfox
--- terafox
--- nordfox
--- dayfox
--- dawnfox
+local colorscheme = 'tokyonight'
 
 vim.cmd[[
 augroup AutoSource
@@ -16,54 +8,38 @@ augroup END
 autocmd! bufwritepost colorscheme.lua source %
 ]]
 
-
-
--- Default options
-require('nightfox').setup({
-  options = {
-    -- Compiled file's destination location
-    compile_path = vim.fn.stdpath("cache") .. "/nightfox",
-    compile_file_suffix = "_compiled", -- Compiled file suffix
-    transparent = false,    -- Disable setting background
-    terminal_colors = true, -- Set terminal colors (vim.g.terminal_color_*) used in `:terminal`
-    dim_inactive = true,   -- Non focused panes set to alternative background
-    module_default = true,  -- Default enable value for modules
-    styles = {              -- Style to be applied to different syntax groups
-      comments = "NONE",    -- Value is any valid attr-list value `:help attr-list`
-      conditionals = "NONE",
-      constants = "NONE",
-      functions = "NONE",
-      keywords = "NONE",
-      numbers = "NONE",
-      operators = "NONE",
-      strings = "NONE",
-      types = "NONE",
-      variables = "NONE",
-    },
-    inverse = {             -- Inverse highlight for different types
-      match_paren = true,
-      visual = false,
-      search = false,
-    },
-    modules = {             -- List of various plugins and additional options
-      -- ...
-    },
+require("tokyonight").setup({
+  style = "night", -- storm, moon, night, day
+  light_style = "day", -- The theme is used when the background is set to light
+  transparent = false, -- Enable this to disable setting the background color
+  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
+  styles = {
+    -- Style to be applied to different syntax groups
+    -- Value is any valid attr-list value for `:help nvim_set_hl`
+    comments = { italic = true },
+    keywords = { italic = true },
+    functions = {},
+    variables = {},
+    -- Background styles. Can be "dark", "transparent" or "normal"
+    sidebars = "dark", -- style for sidebars, see below
+    floats = "dark", -- style for floating windows
   },
-    palettes = {
-        -- nightfox={
-        --     -- blue = { base = "#4d688e", bright = "#4e75aa", dim = "#485e7d" },
-        --     -- bg0='#141A23',
-        --     -- bg1 = "#2e3440",
-        -- },
-        nightfox = {
-          bg1 = '#0A0A0A', -- Black background
-          bg0 = "#1d1d2b", -- Alt backgrounds (floats, statusline, ...)
-          bg3 = "#121820", -- 55% darkened from stock
-          sel0 = "#131b24", -- 55% darkened from stock
-        },
-    },
-  specs = {},
-  groups = {},
+  sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
+  day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
+  hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
+  dim_inactive = true, -- dims inactive windows
+  lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
+
+  --- You can override specific color groups to use other groups or a hex color
+  --- function will be called with a ColorScheme table
+  ---@param colors ColorScheme
+  on_colors = function(colors) end,
+
+  --- You can override specific highlights to use other groups or a hex color
+  --- function will be called with a Highlights and ColorScheme table
+  ---@param highlights Highlights
+  ---@param colors ColorScheme
+  on_highlights = function(highlights, colors) end,
 })
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)

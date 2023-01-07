@@ -40,7 +40,7 @@ return packer.startup(
     function(use)
         use 'wbthomason/packer.nvim'
         use 'jiangmiao/auto-pairs' 
-        use 'EdenEast/nightfox.nvim'
+        use 'folke/tokyonight.nvim'
         use 'akinsho/toggleterm.nvim'
         use 'tpope/vim-commentary'
         use 'chrisbra/csv.vim'
@@ -54,6 +54,11 @@ return packer.startup(
         -- Telescope
         -- use 'nvim-lua/plenary.nvim'
         -- use 'nvim-telescope/telescope.nvim'
+        use {
+            'nvim-telescope/telescope.nvim',
+            tag = '0.1.0',
+            requires = { {'nvim-lua/plenary.nvim'} }
+        }
         
         -- Treesitter
         use {"nvim-treesitter/nvim-treesitter", run=":TSUpdate"}

@@ -1,3 +1,11 @@
+vim.cmd[[
+augroup AutoSource
+    autocmd!
+    autocmd AutoSource BufWritePost <afile> nested source %
+augroup END
+autocmd! bufwritepost colorscheme.lua source %
+]]
+
 local status_ok, configs = pcall(require, 'nvim-treesitter.configs')
 if not status_ok then
     return
