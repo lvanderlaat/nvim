@@ -1,16 +1,16 @@
 -- Automatically install packer
 local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-  PACKER_BOOTSTRAP = vim.fn.system {
-    'git',
-    'clone',
-    '--depth',
-    '1',
-    'https://github.com/wbthomason/packer.nvim',
-    install_path,
-  }
-  print 'Installing packer close and reopen Neovim...'
-  vim.cmd [[packadd packer.nvim]]
+    PACKER_BOOTSTRAP = vim.fn.system{
+        'git',
+        'clone',
+        '--depth',
+        '1',
+        'https://github.com/wbthomason/packer.nvim',
+        install_path,
+    }
+    print 'Installing packer close and reopen Neovim...'
+    vim.cmd[[packadd packer.nvim]]
 end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
@@ -28,9 +28,9 @@ if not status_ok then
 end
 
 -- Have packer use a popup window
-packer.init {
-    display = {
-        open_fn = function()
+packer.init{
+    display={
+        open_fn=function()
             return require('packer.util').float{border='rounded'}
         end,
     },
@@ -39,8 +39,7 @@ packer.init {
 return packer.startup(
     function(use)
         use 'wbthomason/packer.nvim'
-        -- use 'jiangmiao/auto-pairs' 
-        use {"windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end}
+        use {"windwp/nvim-autopairs", config=function() require("nvim-autopairs").setup{} end}
         use 'folke/tokyonight.nvim'
         use 'akinsho/toggleterm.nvim'
         use 'tpope/vim-commentary'
@@ -81,4 +80,3 @@ return packer.startup(
         end
     end
 )
-
