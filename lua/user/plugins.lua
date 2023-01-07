@@ -47,6 +47,7 @@ return packer.startup(
         use 'vim-scripts/indentpython.vim'
         use 'nvim-tree/nvim-web-devicons'
         use 'nvim-tree/nvim-tree.lua'
+        use 'nvim-lualine/lualine.nvim'
 
         -- LSP
         use 'neovim/nvim-lspconfig'

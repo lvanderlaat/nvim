@@ -3,7 +3,7 @@ augroup AutoSource
     autocmd!
     autocmd AutoSource BufWritePost <afile> nested source %
 augroup END
-autocmd! bufwritepost colorscheme.lua source %
+autocmd! bufwritepost ./treesitter.lua source %
 ]]
 
 local status_ok, configs = pcall(require, 'nvim-treesitter.configs')
