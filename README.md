@@ -13,24 +13,10 @@ Use the following keymap to run `git-sync`:
 
     <leader>gs
 
-# LSP
+# Dependencies
+```bash
+pip3 pip install pyright      # LSP
+brew install ripgrep          # Telescope
+pip3 install pynvim --upgrade # Python Highlighting (Shemshi)
+```
 
-Requires:
-
-    pip3 pip install pyright
-
-or 
-
-    pip install pyright
-
-# Telescope
-
-Requires:
-
-    $ brew install ripgrep
-
-# Semshi: Python highlighting
-
-Requires:
-
-    pip3 install pynvim --upgrade
