@@ -14,6 +14,7 @@ Use the following keymap to run `git-sync`:
     <leader>gs
 
 # Dependencies
+
 ```bash
 pip3 pip install pyright      # LSP
 brew install ripgrep          # Telescope
