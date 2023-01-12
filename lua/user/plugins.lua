@@ -49,6 +49,7 @@ return packer.startup(
         use 'nvim-tree/nvim-web-devicons'
         use 'nvim-tree/nvim-tree.lua'
         use 'nvim-lualine/lualine.nvim'
+        use 'junegunn/vim-easy-align'
 
         -- LSP
         use 'neovim/nvim-lspconfig'
