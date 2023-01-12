@@ -73,7 +73,10 @@ return packer.startup(
         use 'hrsh7th/nvim-cmp'
         -- Snip
         use 'hrsh7th/cmp-vsnip'
-        use 'hrsh7th/vim-vsnip'
+        -- use 'hrsh7th/vim-vsnip'
+        use 'L3MON4D3/LuaSnip'
+        use 'saadparwaiz1/cmp_luasnip'
+        use 'rafamadriz/friendly-snippets'
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins

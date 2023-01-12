@@ -1,31 +1,32 @@
 -- Set up nvim-cmp.
 local cmp = require'cmp'
 
+
 local kind_icons = {
-    Text = "",
-    Method = "m",
-    Function = "",
-    Constructor = "",
-    Field = "",
-    Variable = "",
-    Class = "",
-    Interface = "",
-    Module = "",
-    Property = "",
-    Unit = "",
-    Value = "",
-    Enum = "",
-    Keyword = "",
-    Snippet = "",
-    Color = "",
-    File = "",
-    Reference = "",
-    Folder = "",
-    EnumMember = "",
-    Constant = "",
-    Struct = "",
-    Event = "",
-    Operator = "",
+    Text          = "",
+    Method        = "m",
+    Function      = "",
+    Constructor   = "",
+    Field         = "",
+    Variable      = "",
+    Class         = "",
+    Interface     = "",
+    Module        = "",
+    Property      = "",
+    Unit          = "",
+    Value         = "",
+    Enum          = "",
+    Keyword       = "",
+    Snippet       = "",
+    Color         = "",
+    File          = "",
+    Reference     = "",
+    Folder        = "",
+    EnumMember    = "",
+    Constant      = "",
+    Struct        = "",
+    Event         = "",
+    Operator      = "",
     TypeParameter = "",
 }
 
@@ -33,8 +34,8 @@ cmp.setup({
     snippet = {
         -- REQUIRED - you must specify a snippet engine
         expand = function(args)
-        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-        -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+        -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+        require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
         -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
         -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
         end,
@@ -58,10 +59,10 @@ cmp.setup({
             vim_item.kind=string.format("%s", kind_icons[vim_item.kind])
             vim_item.menu=(
                 {
+                    luasnip="[Snip]",
                     buffer="[Buf]",
                     nvim_lsp="[LSP]",
                     nvim_lua="[API]",
-                    luasnip="[Snip]",
                     path="[Path]",
                 }
         )[entry.source.name]
@@ -70,10 +71,10 @@ cmp.setup({
     },
     sources = cmp.config.sources(
         {
+            {name='luasnip' }, -- For luasnip users.
             {name='nvim_lsp'},
             {name='path'},
-            {name='vsnip'}, -- For vsnip users.
-            -- { name = 'luasnip' }, -- For luasnip users.
+            -- {name='vsnip'}, -- For vsnip users.
             -- { name = 'ultisnips' }, -- For ultisnips users.
             -- { name = 'snippy' }, -- For snippy users.
         },
@@ -104,8 +105,3 @@ cmp.setup.cmdline(
         sources=cmp.config.sources({{name='path'}}, {{name='cmdline'}})
     }
 )
-
--- Set up lspconfig.
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require('lspconfig')['pyright'].setup{capabilities=capabilities}
