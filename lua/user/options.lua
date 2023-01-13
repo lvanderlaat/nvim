@@ -5,6 +5,7 @@ local options = {
     number=true,
     relativenumber=true,
     cursorline=true,
+    cursorcolumn=true,
 
     -- Splits --
     splitbelow=true,
