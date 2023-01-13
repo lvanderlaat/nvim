@@ -1,5 +1,9 @@
 local colorscheme = 'tokyonight'
 
+local on_colors = function (colors)
+    colors.bg='#222222'
+end
+
 require("tokyonight").setup({
     style='storm', -- storm, moon, night, day
     light_style="day", -- The theme is used when the background is set to light
@@ -25,7 +29,7 @@ require("tokyonight").setup({
     --- You can override specific color groups to use other groups or a hex color
     --- function will be called with a ColorScheme table
     ---@param colors ColorScheme
-    on_colors = function(colors) end,
+    on_colors=on_colors,
 
     --- You can override specific highlights to use other groups or a hex color
     --- function will be called with a Highlights and ColorScheme table
