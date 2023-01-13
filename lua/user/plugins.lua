@@ -39,7 +39,7 @@ packer.init{
 return packer.startup(
     function(use)
         use 'wbthomason/packer.nvim'
-        use {"windwp/nvim-autopairs", config=function() require("nvim-autopairs").setup{} end}
+        use {'windwp/nvim-autopairs', config=function() require('nvim-autopairs').setup{} end}
         -- use {'adelarsq/image_preview.nvim', config=function() require('image_preview').setup({}) end}
         use 'folke/tokyonight.nvim'
         use 'akinsho/toggleterm.nvim'
@@ -59,8 +59,8 @@ return packer.startup(
         use 'nvim-telescope/telescope.nvim'
         
         -- Treesitter
-        use {"nvim-treesitter/nvim-treesitter", run=":TSUpdate"}
-        use "p00f/nvim-ts-rainbow"
+        use {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'}
+        use 'p00f/nvim-ts-rainbow'
 
         -- Syntax Highlight
         use 'numirias/semshi'
