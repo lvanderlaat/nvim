@@ -40,7 +40,7 @@ return packer.startup(
     function(use)
         use 'wbthomason/packer.nvim'
         use {'windwp/nvim-autopairs', config=function() require('nvim-autopairs').setup{} end}
-        -- use {'adelarsq/image_preview.nvim', config=function() require('image_preview').setup({}) end}
+        use {'karb94/neoscroll.nvim', config=function() require('neoscroll').setup{} end}
         use 'folke/tokyonight.nvim'
         use 'akinsho/toggleterm.nvim'
         use 'tpope/vim-commentary'
