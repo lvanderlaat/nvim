@@ -21,8 +21,10 @@ local options = {
     showmatch=true,
 
     -- Folding
-    foldmethod='indent',
-    foldlevel=99,
+    foldmethod='expr',
+    foldexpr='nvim_treesitter#foldexpr()',
+    -- nofoldenable=true,
+    -- foldlevel=99,
 
     -- Backspace behaviour
     backspace='2', -- indent,eol,start
