@@ -51,12 +51,15 @@ return packer.startup(
         use 'nvim-lualine/lualine.nvim'
         use 'junegunn/vim-easy-align'
 
+
         -- LSP
         use 'neovim/nvim-lspconfig'
 
         -- Telescope
         use 'nvim-lua/plenary.nvim'
         use 'nvim-telescope/telescope.nvim'
+        use 'BurntSushi/ripgrep'
+        use 'sharkdp/fd'
         
         -- Treesitter
         use {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'}
