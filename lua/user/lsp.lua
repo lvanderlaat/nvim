@@ -34,7 +34,12 @@ end
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require('lspconfig')['pylsp'].setup{
--- require('lspconfig')['pyright'].setup{
+    on_attach=on_attach,
+    autostart=true,
+    capabilities=capabilities,
+}
+
+require('lspconfig')['julials'].setup{
     on_attach=on_attach,
     autostart=true,
     capabilities=capabilities,
