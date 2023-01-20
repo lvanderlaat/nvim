@@ -16,8 +16,8 @@ Use the following keymap to run `git-sync`:
 # Dependencies
 
 ```bash
-pip3 pip install pyright      # LSP
-brew install ripgrep          # Telescope
-pip3 install pynvim --upgrade # Python Highlighting (Shemshi)
+pip install python-lsp-server     # PyLSP
+brew install ripgrep              # Telescope
+pip3 install pynvim --upgrade     # Python Highlighting (Shemshi)
 ```
 
