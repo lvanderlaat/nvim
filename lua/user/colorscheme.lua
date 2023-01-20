@@ -1,7 +1,7 @@
 local colorscheme = 'tokyonight'
 
 local on_colors = function (colors)
-    colors.bg='#222222'
+    colors.bg='#0F0F0F'
 end
 
 require("tokyonight").setup({
