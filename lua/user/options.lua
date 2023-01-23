@@ -24,7 +24,7 @@ local options = {
     foldmethod='expr',
     foldexpr='nvim_treesitter#foldexpr()',
     -- nofoldenable=true,
-    -- foldlevel=99,
+    foldlevel=99,
 
     -- Backspace behaviour
     backspace='2', -- indent,eol,start
