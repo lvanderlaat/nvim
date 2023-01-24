@@ -23,17 +23,21 @@ local options = {
     -- Folding
     foldmethod='expr',
     foldexpr='nvim_treesitter#foldexpr()',
-    -- nofoldenable=true,
     foldlevel=99,
 
     -- Backspace behaviour
-    backspace='2', -- indent,eol,start
+    backspace='2', -- indent, eol, start
 
     -- Wrap
     wrap=false,
-    termguicolors=true
+    termguicolors=true,
+
 }
 
 for key, value in pairs(options) do
   vim.opt[key] = value
 end
+
+-- Disable commenting in next line
+vim.cmd("autocmd BufEnter * set formatoptions-=cro")
+vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
