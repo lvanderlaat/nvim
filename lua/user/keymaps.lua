@@ -88,3 +88,7 @@ keymap('n', '<leader>a', '<Cmd>NvimTreeToggle<CR>', opts)
 -- LSP Diagnostics
 keymap('n', '<leader>dd', '<Cmd>lua vim.diagnostic.disable()<CR>', opts)
 keymap('n', '<leader>de', '<Cmd>lua vim.diagnostic.enable()<CR>', opts)
+
+-- Scroll wheel
+keymap('n', '<ScrollWheelDown>', 'j', opts)
+keymap('n', '<ScrollWheelUp>', 'k', opts)
