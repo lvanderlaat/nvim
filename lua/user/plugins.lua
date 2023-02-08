@@ -64,6 +64,7 @@ return packer.startup(
         -- Treesitter
         use {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'}
         use 'p00f/nvim-ts-rainbow'
+        use 'eddiebergman/nvim-treesitter-pyfold'
 
         -- Syntax Highlight
         use 'numirias/semshi'
