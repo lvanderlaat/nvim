@@ -57,22 +57,22 @@ function _GIT_SYNC_TOGGLE()
     terminal_git_sync:toggle()
 end
 
-local terminal_squeue = Terminal:new{
-    cmd='watch -n 1 squeue -u laat',
-    hidden=true,
-    direction='float',
-    close_on_exit=true
-}
-function _SQUEUE_TOGGLE()
-    terminal_squeue:toggle()
-end
+-- local terminal_squeue = Terminal:new{
+--     cmd='watch -n 1 squeue -u laat',
+--     hidden=true,
+--     direction='float',
+--     close_on_exit=true
+-- }
+-- function _SQUEUE_TOGGLE()
+--     terminal_squeue:toggle()
+-- end
 
-local terminal_tail_log = Terminal:new{
-    cmd='watch -n 1 tail -n 30 log',
-    hidden=true,
-    direction='float',
-    close_on_exit=true
-}
-function _LOG_TOGGLE()
-    terminal_tail_log:toggle()
-end
+-- local terminal_tail_log = Terminal:new{
+--     cmd='watch -n 1 tail -n 30 log',
+--     hidden=true,
+--     direction='float',
+--     close_on_exit=true
+-- }
+-- function _LOG_TOGGLE()
+--     terminal_tail_log:toggle()
+-- end

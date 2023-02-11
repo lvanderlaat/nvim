@@ -71,8 +71,10 @@ keymap('n', 'Y', 'yy', opts)
 
 -- Terminal toggles
 keymap('n', '<leader>gs', '<Cmd>lua _GIT_SYNC_TOGGLE()<CR>', opts)
-keymap('n', '<leader>q', '<Cmd>lua _SQUEUE_TOGGLE()<CR>', opts)
-keymap('n', '<leader>l', '<Cmd>lua _LOG_TOGGLE()<CR>', opts)
+-- keymap('n', '<leader>q', '<Cmd>lua _SQUEUE_TOGGLE()<CR>', opts)
+keymap('n', '<leader>q', '<Cmd>!squeue -u laat<CR>', opts)
+-- keymap('n', '<leader>l', '<Cmd>lua _LOG_TOGGLE()<CR>', opts)
+keymap('n', '<leader>l', '<Cmd>!tail -n 30 log<CR>', opts)
 
 -- Run the session command
 keymap('n', '<leader>r', '<Cmd>w<CR><Cmd>TermExec cmd=\'' .. vim.g.cmd .. '\'<CR>', opts)
