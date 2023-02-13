@@ -47,15 +47,15 @@ function _PYTHON_TOGGLE()
 	python:toggle()
 end
 
-local terminal_git_sync = Terminal:new{
-    cmd='cd ~/.config/nvim; ~/.config/nvim/git-sync',
-    hidden=true,
-    direction='float',
-    close_on_exit=false
-}
-function _GIT_SYNC_TOGGLE()
-    terminal_git_sync:toggle()
-end
+-- local terminal_git_sync = Terminal:new{
+--     cmd='cd ~/.config/nvim; ~/.config/nvim/git-sync',
+--     hidden=true,
+--     direction='float',
+--     close_on_exit=false
+-- }
+-- function _GIT_SYNC_TOGGLE()
+--     terminal_git_sync:toggle()
+-- end
 
 -- local terminal_squeue = Terminal:new{
 --     cmd='watch -n 1 squeue -u laat',
