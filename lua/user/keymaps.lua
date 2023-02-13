@@ -70,7 +70,8 @@ keymap('v', '//', 'y/\\V<C-R>=escape(@",\'/\')<CR><CR>', opts)
 keymap('n', 'Y', 'yy', opts)
 
 -- Terminal toggles
-keymap('n', '<leader>gs', '<Cmd>lua _GIT_SYNC_TOGGLE()<CR>', opts)
+-- keymap('n', '<leader>gs', '<Cmd>lua _GIT_SYNC_TOGGLE()<CR>', opts)
+keymap('n', '<leader>gs', '<Cmd>!cd ~/.config/nvim; ./git-sync<CR>', opts)
 -- keymap('n', '<leader>q', '<Cmd>lua _SQUEUE_TOGGLE()<CR>', opts)
 keymap('n', '<leader>q', '<Cmd>!squeue -u laat<CR>', opts)
 -- keymap('n', '<leader>l', '<Cmd>lua _LOG_TOGGLE()<CR>', opts)
