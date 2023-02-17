@@ -39,7 +39,7 @@ keymap('t', '<C-l>', '<C-w>l', opts)
 -- Tab navigation
 keymap('n', '<leader>t', ':tabnew<Space>', opts)
 keymap('n', '<leader>x', 'gt', opts)
-keymap('n', '<leader>z', 'gT', opts)
+-- keymap('n', '<leader>z', 'gT', opts)
 
 -- Save file
 keymap('n', '<leader>s', ':w<CR>', opts)
@@ -95,3 +95,6 @@ keymap('n', '<leader>de', '<Cmd>lua vim.diagnostic.enable()<CR>', opts)
 -- Scroll wheel
 keymap('n', '<ScrollWheelDown>', 'j', opts)
 keymap('n', '<ScrollWheelUp>', 'k', opts)
+
+-- Folding
+keymap('n', '<leader>z', 'za', opts)

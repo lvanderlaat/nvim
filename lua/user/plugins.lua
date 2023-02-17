@@ -49,7 +49,6 @@ return packer.startup(
         use 'nvim-tree/nvim-web-devicons'
         use 'nvim-tree/nvim-tree.lua'
         use 'nvim-lualine/lualine.nvim'
-        use 'junegunn/vim-easy-align'
 
 
         -- LSP
@@ -64,7 +63,6 @@ return packer.startup(
         -- Treesitter
         use {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'}
         use 'p00f/nvim-ts-rainbow'
-        use 'eddiebergman/nvim-treesitter-pyfold'
 
         -- Syntax Highlight
         use 'numirias/semshi'
@@ -78,9 +76,9 @@ return packer.startup(
         -- Snip
         use 'hrsh7th/cmp-vsnip'
         -- use 'hrsh7th/vim-vsnip'
-        use 'L3MON4D3/LuaSnip'
-        use 'saadparwaiz1/cmp_luasnip'
-        use 'rafamadriz/friendly-snippets'
+        -- use 'L3MON4D3/LuaSnip'
+        -- use 'saadparwaiz1/cmp_luasnip'
+        -- use 'rafamadriz/friendly-snippets'
 
         use ({
             "iamcco/markdown-preview.nvim",

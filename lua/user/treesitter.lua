@@ -30,8 +30,8 @@ configs.setup{
         -- colors = {}, -- table of hex strings
         -- termcolors = {} -- table of colour name strings
         },
-    pyfold={
-        enable=true,
-        custom_foldtext=true -- Sets provided foldtext on window where module is active
-    }
+    -- pyfold={
+    --     enable=true,
+    --     custom_foldtext=true -- Sets provided foldtext on window where module is active
+    -- }
 }
