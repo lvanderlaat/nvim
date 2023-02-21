@@ -80,7 +80,8 @@ keymap('n', '<leader>l', '<Cmd>!tail -n 30 log<CR>', opts)
 -- Run the session command
 keymap('n', '<leader>r', '<Cmd>w<CR><Cmd>TermExec cmd=\'' .. vim.g.cmd .. '\'<CR>', opts)
 keymap('i', '<leader>r', '<ESC><Cmd>w<CR><Cmd>TermExec cmd=\'' .. vim.g.cmd .. '\'<CR>', opts)
-keymap('v', '<leader>r', '<ESC><Cmd>ToggleTermSendVisualSelection<CR>', opts)
+-- keymap('v', '<leader>r', '<ESC><Cmd>ToggleTermSendVisualSelection<CR>', opts)
+keymap('v', '<leader>r', ':ToggleTermSendVisualLines<CR>', opts)
 
 -- Path completion
 keymap('i', '<C-p>', '<C-x><C-f>', opts)
