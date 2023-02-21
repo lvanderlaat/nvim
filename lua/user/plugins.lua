@@ -64,8 +64,9 @@ return packer.startup(
         use {'nvim-treesitter/nvim-treesitter', run=':TSUpdate'}
         use 'p00f/nvim-ts-rainbow'
 
-        -- Syntax Highlight
-        use 'numirias/semshi'
+        -- Syntax Highlight for python
+        -- use 'numirias/semshi'
+        use 'wookayin/semshi'
 
         -- Completion
         use 'hrsh7th/cmp-nvim-lsp'
@@ -73,6 +74,7 @@ return packer.startup(
         use 'hrsh7th/cmp-path'
         use 'hrsh7th/cmp-cmdline'
         use 'hrsh7th/nvim-cmp'
+
         -- Snip
         use 'hrsh7th/cmp-vsnip'
         -- use 'hrsh7th/vim-vsnip'
