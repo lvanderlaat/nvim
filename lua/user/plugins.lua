@@ -87,6 +87,16 @@ return packer.startup(
             run = function() vim.fn["mkdp#util#install"]() end,
         })
 
+        use { 
+            'martineausimon/nvim-lilypond-suite',
+            requires='MunifTanjim/nui.nvim',
+            config=function()
+                require('nvls').setup({
+                    -- edit config here (see "Customize default settings" in wiki)
+                })
+            end
+        }
+
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
         if PACKER_BOOTSTRAP then
