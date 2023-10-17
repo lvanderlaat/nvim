@@ -18,7 +18,7 @@ keymap('i', '<leader>e',  'print()<CR>exit()<ESC>kf)i', opts)
 keymap(
     {'n', 'i'},
     '<leader>m',
-    '<ESC>ggi#!/usr/bin/env python<CR><CR><CR>\"\"\"<CR>\"\"\"<CR><CR><CR># Python Standard Library<CR><CR># Other dependencies<CR><CR># Local files<CR><CR><CR>__author__ = \'Leonardo van der Laat\'<CR>__email__ = \'laat@umich.edu\'<CR><CR><CR>def main():<CR>return<CR><CR><CR><ESC>iif __name__ == \'__main__\':<CR>main()<ESC>',
+    '<ESC>ggi#!/usr/bin/env python<CR><CR><CR>\"\"\"<CR>\"\"\"<CR><CR><CR># Python Standard Library<CR><CR># Other dependencies<CR><CR># Local files<CR><CR><CR>__author__ = \'Leonardo van der Laat\'<CR>__email__ = \'lvmzxc@gmail.com\'<CR><CR><CR>def main():<CR>return<CR><CR><CR><ESC>iif __name__ == \'__main__\':<CR>main()<ESC>',
     opts
 )
 
