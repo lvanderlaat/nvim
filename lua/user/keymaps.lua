@@ -1,3 +1,5 @@
+-- Keymaps
+
 if not vim.g.cmd then
     vim.g.cmd = 'echo "Set a session command: :lua session_cmd(CMD)"'
 end
