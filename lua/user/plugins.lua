@@ -40,7 +40,6 @@ return packer.startup(
     function(use)
         use 'wbthomason/packer.nvim'
         use {'windwp/nvim-autopairs', config=function() require('nvim-autopairs').setup{} end}
-        -- use {'karb94/neoscroll.nvim', config=function() require('neoscroll').setup{} end}
         use 'folke/tokyonight.nvim'
         use 'akinsho/toggleterm.nvim'
         use 'tpope/vim-commentary'
@@ -49,7 +48,6 @@ return packer.startup(
         use 'nvim-tree/nvim-web-devicons'
         use 'nvim-tree/nvim-tree.lua'
         use 'nvim-lualine/lualine.nvim'
-
 
         -- LSP
         use 'neovim/nvim-lspconfig'
@@ -65,7 +63,6 @@ return packer.startup(
         use 'p00f/nvim-ts-rainbow'
 
         -- Syntax Highlight for python
-        -- use 'numirias/semshi'
         use 'wookayin/semshi'
 
         -- Completion
@@ -77,16 +74,13 @@ return packer.startup(
 
         -- Snip
         use 'hrsh7th/cmp-vsnip'
-        -- use 'hrsh7th/vim-vsnip'
-        -- use 'L3MON4D3/LuaSnip'
-        -- use 'saadparwaiz1/cmp_luasnip'
-        -- use 'rafamadriz/friendly-snippets'
 
         use ({
             "iamcco/markdown-preview.nvim",
             run = function() vim.fn["mkdp#util#install"]() end,
         })
 
+        -- Lilypond
         use { 
             'martineausimon/nvim-lilypond-suite',
             requires='MunifTanjim/nui.nvim',
@@ -96,6 +90,9 @@ return packer.startup(
                 })
             end
         }
+
+        -- Folding
+        use {'kevinhwang91/nvim-ufo', requires='kevinhwang91/promise-async'}
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
