@@ -1,7 +1,6 @@
 -- Set up nvim-cmp.
 local cmp = require'cmp'
 
-
 local kind_icons = {
     Text          = "",
     Method        = "m",
@@ -79,7 +78,14 @@ cmp.setup({
             -- { name = 'snippy' }, -- For snippy users.
         },
         {
-            {name='buffer'},
+            -- {name='buffer', keyword_length=4},
+            {
+                name='buffer',
+                keyword_length=3,
+                option={
+                    get_bufnrs=function() return vim.api.nvim_list_bufs() end
+                } 
+            }
         }
     ),
     experimental={ghost_text=true, native_menu=false},

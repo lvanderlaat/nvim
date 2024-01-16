@@ -100,4 +100,4 @@ keymap('n', '<ScrollWheelDown>', 'j', opts)
 keymap('n', '<ScrollWheelUp>', 'k', opts)
 
 -- Folding
--- keymap('n', '<leader>z', 'za', opts)
+keymap('n', '<space>', 'za', opts)
