@@ -42,12 +42,20 @@ return packer.startup(
         use {'windwp/nvim-autopairs', config=function() require('nvim-autopairs').setup{} end}
         use 'folke/tokyonight.nvim'
         use 'akinsho/toggleterm.nvim'
-        use 'tpope/vim-commentary'
         use 'chrisbra/csv.vim'
         use 'vim-scripts/indentpython.vim'
         use 'nvim-tree/nvim-web-devicons'
         use 'nvim-tree/nvim-tree.lua'
         use 'nvim-lualine/lualine.nvim'
+
+        -- Comments
+        use 'tpope/vim-commentary'
+        -- use {
+        --     'numToStr/Comment.nvim',
+        --     config = function()
+        --         require('Comment').setup()
+        --     end
+        -- }
 
         -- LSP
         use 'neovim/nvim-lspconfig'
@@ -90,6 +98,8 @@ return packer.startup(
                 })
             end
         }
+
+        use 'MathSquared/vim-python-sql'
 
         -- Folding
         -- use {'kevinhwang91/nvim-ufo', requires='kevinhwang91/promise-async'}
