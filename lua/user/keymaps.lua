@@ -40,7 +40,7 @@ keymap('t', '<C-l>', '<C-w>l', opts)
 
 -- Tab navigation
 keymap('n', '<leader>t', ':tabnew<Space>', opts)
-keymap('n', '<leader>x', 'gt', opts)
+-- keymap('n', '<leader>x', 'gt', opts)
 -- keymap('n', '<leader>z', 'gT', opts)
 
 -- Save file
@@ -100,4 +100,14 @@ keymap('n', '<ScrollWheelDown>', 'j', opts)
 keymap('n', '<ScrollWheelUp>', 'k', opts)
 
 -- Folding
-keymap('n', '<space>', 'za', opts)
+keymap('n', '<leader>x', 'za', opts)
+
+-- Telescope
+local builtin = require('telescope.builtin')
+
+-- vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+keymap('n', '<leader>ff', ':lua CustomFindFiles()<CR>', opts)
+keymap('n', '<leader>fg', ':lua CustomLiveGrep()<CR>', opts)
