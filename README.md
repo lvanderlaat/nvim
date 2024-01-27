@@ -20,4 +20,3 @@ pip install python-lsp-server     # PyLSP
 brew install ripgrep              # Telescope
 pip3 install pynvim --upgrade     # Python Highlighting (Shemshi)
 ```
-
