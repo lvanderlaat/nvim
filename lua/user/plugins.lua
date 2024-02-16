@@ -99,7 +99,7 @@ return packer.startup(
             end
         }
 
-        use 'MathSquared/vim-python-sql'
+        -- use 'MathSquared/vim-python-sql'
 
         -- Folding
         -- use {'kevinhwang91/nvim-ufo', requires='kevinhwang91/promise-async'}
