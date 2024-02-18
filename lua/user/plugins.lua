@@ -42,7 +42,7 @@ return packer.startup(
         use {'windwp/nvim-autopairs', config=function() require('nvim-autopairs').setup{} end}
         use 'folke/tokyonight.nvim'
         use 'akinsho/toggleterm.nvim'
-        use 'chrisbra/csv.vim'
+        -- use 'chrisbra/csv.vim'
         use 'vim-scripts/indentpython.vim'
         use 'nvim-tree/nvim-web-devicons'
         use 'nvim-tree/nvim-tree.lua'
@@ -103,6 +103,28 @@ return packer.startup(
 
         -- Folding
         -- use {'kevinhwang91/nvim-ufo', requires='kevinhwang91/promise-async'}
+
+
+        -- CSV files
+        use {
+            'cameron-wags/rainbow_csv.nvim',
+            config = function()
+                require 'rainbow_csv'.setup()
+            end,
+            module = {
+                'rainbow_csv',
+                'rainbow_csv.fns'
+            },
+            ft = {
+                'csv',
+                'tsv',
+                'csv_semicolon',
+                'csv_whitespace',
+                'csv_pipe',
+                'rfc_csv',
+                'rfc_semicolon'
+            }
+        }
 
         -- Automatically set up your configuration after cloning packer.nvim
         -- Put this at the end after all plugins
