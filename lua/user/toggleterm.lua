@@ -42,9 +42,26 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 local Terminal = require("toggleterm.terminal").Terminal
 
 
+local run = Terminal:new({id=1, hidden=true, direction="vertical", size=90})
+function _RUN_SEND(cmd)
+    run:open()
+    run:send(cmd)
+end
+
 local python = Terminal:new({cmd="ipython", hidden=true})
 function _PYTHON_TOGGLE()
 	python:toggle()
+end
+
+local claude = Terminal:new({
+    cmd = "claude",
+    hidden = true,
+    direction = "vertical",
+    size = 90,
+    close_on_exit = false,
+})
+function _CLAUDE_TOGGLE()
+    claude:toggle()
 end
 
 -- local terminal_git_sync = Terminal:new{
