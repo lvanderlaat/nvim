@@ -44,8 +44,13 @@ local Terminal = require("toggleterm.terminal").Terminal
 
 local run = Terminal:new({id=1, hidden=true, direction="vertical", size=90})
 function _RUN_SEND(cmd)
-    run:open()
+    local prev_win = vim.api.nvim_get_current_win()
+    if not run:is_open() then
+        run:open()
+    end
     run:send(cmd)
+    vim.api.nvim_set_current_win(prev_win)
+    vim.cmd('stopinsert')
 end
 
 local python = Terminal:new({cmd="ipython", hidden=true})
