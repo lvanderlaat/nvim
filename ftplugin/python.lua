@@ -27,13 +27,13 @@ keymap(
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 vim.opt.filetype = 'on'
-vim.opt.colorcolumn = '80'
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.textwidth = 79
-vim.opt.expandtab = true
-vim.opt.autoindent = true
-vim.opt.fileformat = 'unix'
+vim.opt_local.colorcolumn = '80'
+vim.opt_local.tabstop = 4
+vim.opt_local.softtabstop = 4
+vim.opt_local.shiftwidth = 4
+vim.opt_local.textwidth = 79
+vim.opt_local.expandtab = true
+vim.opt_local.autoindent = true
+vim.opt_local.fileformat = 'unix'
 vim.opt.commentstring="# %s"
 -- vim.opt.indentLine_char = '┆'
